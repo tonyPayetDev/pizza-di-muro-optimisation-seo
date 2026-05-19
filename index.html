@@ -4,37 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO Primary -->
-  <title>Pizza Di Muro : Recettes, astuces cuisine et actualités food au quotidien</title>
-  <meta name="description" content="Découvrez des recettes faciles, astuces de chefs, décryptages d'aliments et actualités food pour mieux manger chaque jour." />
-  <meta name="keywords" content="recettes pizza, astuces cuisine, actualités food, recettes faciles, conseils alimentation, cuisine italienne, recettes gourmandes, astuces de chefs" />
-  <meta name="robots" content="index, follow" />
+  <!-- SEO -->
+  <title>Pizza Di Muro : Recettes faciles, astuces cuisine et actualités food au quotidien</title>
+  <meta name="description" content="Découvrez Pizza Di Muro, votre source d'inspiration pour recettes simples, astuces de chefs, décryptages d'aliments et actualités food pour mieux manger chaque jour." />
+  <meta name="keywords" content="recettes pizza, astuces cuisine, actualités food, recettes faciles, conseils alimentation, cuisine italienne, recettes gourmandes, astuces de chefs, aliments bienfaits" />
   <meta name="author" content="Pizza Di Muro" />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://pizza-dimuro.fr/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Pizza Di Muro : Recettes, astuces cuisine et actualités food" />
-  <meta property="og:description" content="Découvrez des recettes faciles, astuces de chefs, décryptages d'aliments et actualités food pour mieux manger chaque jour." />
-  <meta property="og:image" content="assets/images/hero-pizza.jpg" />
   <meta property="og:url" content="https://pizza-dimuro.fr/" />
+  <meta property="og:title" content="Pizza Di Muro : Recettes faciles, astuces cuisine et actualités food au quotidien" />
+  <meta property="og:description" content="Découvrez Pizza Di Muro, votre source d'inspiration pour recettes simples, astuces de chefs, décryptages d'aliments et actualités food pour mieux manger chaque jour." />
+  <meta property="og:image" content="assets/images/hero-pizza.jpg" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:site_name" content="Pizza Di Muro" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Pizza Di Muro : Recettes, astuces cuisine et actualités food" />
-  <meta name="twitter:description" content="Découvrez des recettes faciles, astuces de chefs, décryptages d'aliments et actualités food pour mieux manger chaque jour." />
+  <meta name="twitter:title" content="Pizza Di Muro : Recettes, astuces et actualités food" />
+  <meta name="twitter:description" content="Recettes simples, astuces de chefs et actualités food pour mieux manger chaque jour." />
   <meta name="twitter:image" content="assets/images/hero-pizza.jpg" />
 
-  <!-- Structured Data -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Lato:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Pizza Di Muro",
     "url": "https://pizza-dimuro.fr/",
-    "description": "Découvrez des recettes faciles, astuces de chefs, décryptages d'aliments et actualités food pour mieux manger chaque jour.",
+    "description": "Recettes faciles, astuces cuisine et actualités food au quotidien",
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://pizza-dimuro.fr/?s={search_term_string}",
@@ -42,888 +56,900 @@
     }
   }
   </script>
-
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/logo.png" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <!-- ================================
-       HEADER
-  ================================ -->
-  <header id="header" role="banner">
+  <!-- ===== TOP BAR ===== -->
+  <div class="top-bar">
     <div class="container">
-      <div class="header-inner">
-
-        <!-- Logo -->
-        <a href="#" class="logo" aria-label="Pizza Di Muro - Accueil">
-          <img src="assets/images/logo.png"
-               alt="Pizza Di Muro - Recettes et astuces cuisine"
-               width="140"
-               height="48" />
-        </a>
-
-        <!-- Navigation principale -->
-        <nav id="main-nav" class="nav" role="navigation" aria-label="Menu principal">
-          <a href="#actualites" class="active" aria-current="page">Actualités</a>
-          <a href="#recettes">Recettes</a>
-          <a href="#aliments">Aliments</a>
-          <a href="#astuces">Astuces</a>
-          <a href="#newsletter" class="nav-cta">Newsletter</a>
-        </nav>
-
-        <!-- Burger menu (mobile) -->
-        <button id="burger" class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-      </div>
-    </div>
-  </header>
-
-
-  <!-- ================================
-       HERO
-  ================================ -->
-  <section class="hero" aria-labelledby="hero-heading">
-    <div class="hero-bg">
-      <img src="assets/images/hero-pizza.jpg"
-           alt="Pizza artisanale fraîchement préparée"
-           width="1400"
-           height="700" />
-    </div>
-    <div class="hero-overlay" aria-hidden="true"></div>
-
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge" aria-label="Nouveau contenu">
-          <span>🍕</span> Nouveau chaque semaine
-        </div>
-
-        <h1 id="hero-heading">
-          Pizza Di Muro : <span>Recettes</span>, astuces cuisine et actualités food au quotidien
-        </h1>
-
-        <p class="hero-description">
-          Découvrez des recettes faciles, astuces de chefs, décryptages d'aliments et actualités food pour mieux manger chaque jour.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#recettes" class="btn btn-primary">
-            🍽️ Explorer les recettes
-          </a>
-          <a href="#newsletter" class="btn btn-white">
-            📧 S'abonner
-          </a>
-        </div>
-
-        <div class="hero-stats" aria-label="Statistiques du site">
-          <div class="hero-stat">
-            <div class="hero-stat-value">500+</div>
-            <div class="hero-stat-label">Recettes publiées</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-value">12k</div>
-            <div class="hero-stat-label">Abonnés newsletter</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-value">100%</div>
-            <div class="hero-stat-label">Testé par des chefs</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ================================
-       TRENDING BAR
-  ================================ -->
-  <div class="trending-bar" aria-label="Tendances du moment" role="marquee">
-    <div class="container">
-      <div class="trending-bar-inner">
-        <span class="trending-label">Tendances</span>
-        <div class="trending-items">
-          <div class="trending-scroll">
-            <span>Gigot d'agneau aux flageolets</span>
-            <span>Tarte aux fraises de saison</span>
-            <span>Pain maison sans pétrissage</span>
-            <span>Asperges vertes à la plancha</span>
-            <span>Gratin dauphinois revisité</span>
-            <span>5 plats italiens incontournables</span>
-            <span>Fraises : bienfaits et conservation</span>
-            <span>Pesticides dans les fruits : que savoir ?</span>
-          </div>
+      <div class="top-bar-inner">
+        <span class="top-bar-date">
+          <i class="far fa-calendar-alt"></i>&nbsp; Lundi 19 mai 2026
+        </span>
+        <div class="top-bar-social">
+          <span>Suivez-nous :</span>
+          <a href="https://www.facebook.com/pizzadimuro" aria-label="Facebook" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/pizzadimuro" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@pizzadimuro" aria-label="TikTok" rel="noopener noreferrer" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.youtube.com/@pizzadimuro" aria-label="YouTube" rel="noopener noreferrer" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://twitter.com/pizzadimuro" aria-label="X / Twitter" rel="noopener noreferrer" target="_blank"><i class="fab fa-x-twitter"></i></a>
         </div>
       </div>
     </div>
   </div>
 
-
-  <!-- ================================
-       SECTION ACTUALITÉS
-  ================================ -->
-  <section id="actualites" class="section actualites-section" aria-labelledby="actu-title">
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" role="banner">
     <div class="container">
-
-      <div class="section-header fade-in">
-        <div>
-          <span class="section-label">🗞️ À la une</span>
-          <h2 class="section-title" id="actu-title">Actualités culinaires</h2>
-          <p class="section-desc">Retrouvez les dernières tendances, conseils et informations sur la cuisine et l'alimentation.</p>
-        </div>
-        <a href="#actualites" class="btn btn-outline">Explorez nos actualités →</a>
-      </div>
-
-      <!-- Article vedette + mini articles -->
-      <div class="news-featured">
-
-        <!-- Grande carte principale -->
-        <article class="card news-card-large fade-in">
-          <div class="card-image">
-            <img src="assets/images/actu-food.jpg"
-                 alt="Tendances culinaires 2025 : les nouvelles saveurs qui s'imposent"
-                 loading="lazy"
-                 width="800"
-                 height="450" />
-            <span class="card-category">À la une</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span>📅 18 mai 2025</span>
-              <span>👁️ 4 200 lectures</span>
-              <span>⏱️ 6 min</span>
-            </div>
-            <h3><a href="#">Les grandes tendances culinaires qui façonnent nos assiettes en 2025</a></h3>
-            <p>Du retour en force des légumineuses aux nouveaux modes de cuisson low-tech, découvrez comment les habitudes alimentaires évoluent et ce que les chefs adoptent en priorité cette saison.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Lire l'article →</a>
-            <span style="font-size:0.8rem; color: var(--gray-400);">Par Élodie Martin</span>
-          </div>
-        </article>
-
-        <!-- Colonne mini actualités -->
-        <aside class="news-stack fade-in fade-in-delay-1" aria-label="Autres actualités">
-
-          <article class="news-item-sm">
-            <div class="thumb">
-              <img src="assets/images/actu-tendance.jpg"
-                   alt="Prix des aliments bio en 2025"
-                   loading="lazy"
-                   width="88"
-                   height="72" />
-            </div>
-            <div class="text">
-              <h4><a href="#">Le bio accessible : les prix en forte baisse dans les grandes surfaces</a></h4>
-              <span>📅 15 mai 2025 · 3 min</span>
-            </div>
-          </article>
-
-          <article class="news-item-sm">
-            <div class="thumb">
-              <img src="assets/images/aliment-legumes.jpg"
-                   alt="Pesticides dans les fruits et légumes"
-                   loading="lazy"
-                   width="88"
-                   height="72" />
-            </div>
-            <div class="text">
-              <h4><a href="#">Pesticides : quels fruits et légumes privilégier pour réduire son exposition ?</a></h4>
-              <span>📅 13 mai 2025 · 4 min</span>
-            </div>
-          </article>
-
-          <article class="news-item-sm">
-            <div class="thumb">
-              <img src="assets/images/recette-pizza.jpg"
-                   alt="Cuisine italienne populaire en France"
-                   loading="lazy"
-                   width="88"
-                   height="72" />
-            </div>
-            <div class="text">
-              <h4><a href="#">Pourquoi la cuisine italienne continue de dominer nos restaurants ?</a></h4>
-              <span>📅 11 mai 2025 · 5 min</span>
-            </div>
-          </article>
-
-          <article class="news-item-sm">
-            <div class="thumb">
-              <img src="assets/images/aliment-fruits.jpg"
-                   alt="Consommation de fruits saisonniers"
-                   loading="lazy"
-                   width="88"
-                   height="72" />
-            </div>
-            <div class="text">
-              <h4><a href="#">Fruits de saison : notre guide complet pour mai et juin</a></h4>
-              <span>📅 9 mai 2025 · 2 min</span>
-            </div>
-          </article>
-
-        </aside>
-      </div>
-
-      <!-- Grille 3 cartes secondaires -->
-      <div class="grid-3 fade-in fade-in-delay-2">
-
-        <article class="card">
-          <div class="card-image">
-            <img src="assets/images/recette-pain.jpg"
-                 alt="Pain maison sans pétrissage : la recette qui révolutionne les cuisines"
-                 loading="lazy"
-                 width="800"
-                 height="500" />
-            <span class="card-category">Tendance</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span>📅 8 mai 2025</span>
-              <span>⏱️ 4 min</span>
-            </div>
-            <h3><a href="#">Pain maison sans pétrissage : la méthode qui cartonne sur les réseaux</a></h3>
-            <p>Des milliers de home-bakers se sont lancés dans cette technique ultra-simple qui donne un pain croustillant et alvéolé sans effort. On vous explique tout.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Lire l'article →</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-image">
-            <img src="assets/images/astuce-cuisine.jpg"
-                 alt="Les nouvelles cuisines du monde qui s'installent en France"
-                 loading="lazy"
-                 width="800"
-                 height="500" />
-            <span class="card-category">Monde</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span>📅 6 mai 2025</span>
-              <span>⏱️ 5 min</span>
-            </div>
-            <h3><a href="#">Cuisines du monde : ces saveurs venues d'ailleurs qui s'invitent dans nos foyers</a></h3>
-            <p>Coréenne, éthiopienne, péruvienne… les influences culinaires mondiales transforment notre façon de cuisiner. Tour d'horizon des tendances qui montent.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Lire l'article →</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-image">
-            <img src="assets/images/actu-food.jpg"
-                 alt="L'inflation alimentaire recule enfin en France"
-                 loading="lazy"
-                 width="800"
-                 height="500" />
-            <span class="card-category">Économie</span>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span>📅 4 mai 2025</span>
-              <span>⏱️ 3 min</span>
-            </div>
-            <h3><a href="#">Inflation alimentaire : les prix reculent dans plusieurs rayons clés</a></h3>
-            <p>Bonne nouvelle pour le pouvoir d'achat : les prix de certains produits essentiels comme les pâtes, le beurre et les yaourts affichent une baisse sensible.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Lire l'article →</a>
-          </div>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ================================
-       SECTION RECETTES
-  ================================ -->
-  <section id="recettes" class="section recettes-section" aria-labelledby="recettes-title">
-    <div class="container">
-
-      <div class="section-header fade-in">
-        <div>
-          <span class="section-label">🍽️ Cuisine maison</span>
-          <h2 class="section-title" id="recettes-title">Recettes faciles et gourmandes</h2>
-          <p class="section-desc">Des idées de plats simples à réaliser, pour tous les goûts et toutes les occasions.</p>
-        </div>
-        <a href="#recettes" class="btn btn-primary">Découvrez nos recettes →</a>
-      </div>
-
-      <!-- Filtre catégories recettes -->
-      <nav class="section-nav fade-in" aria-label="Filtrer les recettes">
-        <a href="#" class="active">Tout voir</a>
-        <a href="#">Entrées</a>
-        <a href="#">Plats</a>
-        <a href="#">Desserts</a>
-        <a href="#">Végétarien</a>
-        <a href="#">Rapide (&lt;30 min)</a>
-      </nav>
-
-      <div class="grid-4 fade-in">
-
-        <article class="recipe-card">
-          <div class="card-image">
-            <img src="assets/images/recette-pizza.jpg"
-                 alt="Pizza Margherita maison, recette authentique napolitaine"
-                 loading="lazy"
-                 width="800"
-                 height="600" />
-            <span class="card-category">Pizza</span>
-            <div class="recipe-badge">
-              <span>⏱️ 45 min</span>
-              <span>👥 4 pers.</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span>🌶️ Facile</span>
-            </div>
-            <h3><a href="#">Pizza Margherita maison, la vraie recette napolitaine</a></h3>
-            <p>Pâte fine et croustillante, sauce tomate parfumée, mozzarella fondante et basilic frais.</p>
-            <div class="difficulty-bar" aria-label="Difficulté : 1/3">
-              <div class="dot active"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Voir la recette →</a>
-          </div>
-        </article>
-
-        <article class="recipe-card">
-          <div class="card-image">
-            <img src="assets/images/recette-pates.jpg"
-                 alt="Pasta alla carbonara authentique, recette italienne"
-                 loading="lazy"
-                 width="800"
-                 height="600" />
-            <span class="card-category">Pâtes</span>
-            <div class="recipe-badge">
-              <span>⏱️ 20 min</span>
-              <span>👥 2 pers.</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span>🌶️ Facile</span>
-            </div>
-            <h3><a href="#">Pasta alla carbonara : la recette authentique sans crème</a></h3>
-            <p>Guanciale, pecorino, jaunes d'œufs et poivre noir : le secret de la vraie carbonara.</p>
-            <div class="difficulty-bar" aria-label="Difficulté : 1/3">
-              <div class="dot active"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Voir la recette →</a>
-          </div>
-        </article>
-
-        <article class="recipe-card">
-          <div class="card-image">
-            <img src="assets/images/recette-salade.jpg"
-                 alt="Grande salade composée fraîcheur de printemps"
-                 loading="lazy"
-                 width="800"
-                 height="600" />
-            <span class="card-category">Salade</span>
-            <div class="recipe-badge">
-              <span>⏱️ 15 min</span>
-              <span>👥 2 pers.</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span>🌶️ Facile</span>
-            </div>
-            <h3><a href="#">Grande salade composée fraîcheur : avocat, tomates et feta</a></h3>
-            <p>Une salade colorée et nourrissante avec une vinaigrette au citron et herbes fraîches.</p>
-            <div class="difficulty-bar" aria-label="Difficulté : 1/3">
-              <div class="dot active"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Voir la recette →</a>
-          </div>
-        </article>
-
-        <article class="recipe-card">
-          <div class="card-image">
-            <img src="assets/images/recette-pain.jpg"
-                 alt="Pain de campagne maison sans pétrissage, croustillant et doré"
-                 loading="lazy"
-                 width="800"
-                 height="600" />
-            <span class="card-category">Boulangerie</span>
-            <div class="recipe-badge">
-              <span>⏱️ 2h</span>
-              <span>👥 6 pers.</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span>🌶️🌶️ Moyen</span>
-            </div>
-            <h3><a href="#">Pain de campagne maison : la méthode sans pétrissage qui bluffera vos invités</a></h3>
-            <p>Croûte dorée, mie alvéolée et saveur incomparable. Un pain artisanal à faire chez vous.</p>
-            <div class="difficulty-bar" aria-label="Difficulté : 2/3">
-              <div class="dot active"></div>
-              <div class="dot active"></div>
-              <div class="dot"></div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Voir la recette →</a>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- CTA voir plus -->
-      <div style="text-align: center; margin-top: 40px;" class="fade-in">
-        <a href="#recettes" class="btn btn-secondary">Voir toutes nos recettes (500+) →</a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ================================
-       SECTION FOCUS ALIMENTS
-  ================================ -->
-  <section id="aliments" class="section" aria-labelledby="aliments-title">
-    <div class="container">
-
-      <div class="section-header fade-in">
-        <div>
-          <span class="section-label">🥦 Nutrition</span>
-          <h2 class="section-title" id="aliments-title">Focus sur les aliments</h2>
-          <p class="section-desc">Analyse et conseils sur les aliments pour une alimentation saine et équilibrée.</p>
-        </div>
-        <a href="#aliments" class="btn btn-outline">En savoir plus sur les aliments →</a>
-      </div>
-
-      <div class="aliments-main fade-in">
-
-        <!-- Grande carte -->
-        <article class="aliment-card">
-          <img src="assets/images/aliment-legumes.jpg"
-               alt="Légumes colorés de saison : tomates, courgettes, aubergines, poivrons"
-               loading="lazy"
-               width="800"
-               height="700" />
-          <div class="overlay">
-            <span class="tag">🥗 Saison de printemps</span>
-            <h3>Les légumes de mai à mettre absolument dans votre assiette</h3>
-            <p>Radis, asperges, épinards, petits pois : les légumes de printemps sont là. Riches en vitamines, légers et savoureux.</p>
-          </div>
-        </article>
-
-        <!-- Deux petites cartes -->
-        <article class="aliment-card">
-          <img src="assets/images/aliment-fruits.jpg"
-               alt="Fruits rouges de saison : fraises, framboises, cerises"
-               loading="lazy"
-               width="800"
-               height="400" />
-          <div class="overlay">
-            <span class="tag">🍓 Bienfaits</span>
-            <h3>Fraises, framboises, cerises : les fruits rouges et leurs super-pouvoirs</h3>
-            <p>Antioxydants, vitamines C et polyphénols : ce que ces petits fruits font pour votre santé.</p>
-          </div>
-        </article>
-
-        <article class="aliment-card">
-          <img src="assets/images/actu-tendance.jpg"
-               alt="Épices et aromates pour relever et enrichir les plats"
-               loading="lazy"
-               width="800"
-               height="400" />
-          <div class="overlay">
-            <span class="tag">🌿 Aromates</span>
-            <h3>Herbes et épices : lesquelles garder en cuisine pour cuisiner sain</h3>
-            <p>Curcuma, basilic, coriandre ou romarin : guide pratique pour bien utiliser les épices au quotidien.</p>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- Grille mini aliments -->
-      <div class="grid-3 fade-in fade-in-delay-1" style="margin-top: 28px;">
-
-        <article class="card">
-          <div class="card-image">
-            <img src="assets/images/recette-salade.jpg"
-                 alt="Avocats : les bienfaits nutritionnels et comment les choisir"
-                 loading="lazy"
-                 width="800"
-                 height="500" />
-            <span class="card-category">Nutrition</span>
-          </div>
-          <div class="card-body">
-            <h3><a href="#">Avocat : tout ce que vous devez savoir sur ce super-aliment</a></h3>
-            <p>Graisses insaturées, fibres, potassium : l'avocat est bien plus qu'une tendance. Décryptage complet.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Lire l'article →</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-image">
-            <img src="assets/images/aliment-legumes.jpg"
-                 alt="Protéines végétales : lentilles, pois chiches et haricots"
-                 loading="lazy"
-                 width="800"
-                 height="500" />
-            <span class="card-category">Protéines</span>
-          </div>
-          <div class="card-body">
-            <h3><a href="#">Légumineuses : la source de protéines végétales à adopter d'urgence</a></h3>
-            <p>Lentilles, pois chiches, haricots… peu chères et très nutritives, les légumineuses méritent une place quotidienne dans votre menu.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Lire l'article →</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-image">
-            <img src="assets/images/recette-pain.jpg"
-                 alt="Pain au levain : bienfaits digestifs et valeur nutritionnelle"
-                 loading="lazy"
-                 width="800"
-                 height="500" />
-            <span class="card-category">Céréales</span>
-          </div>
-          <div class="card-body">
-            <h3><a href="#">Pain au levain vs pain industriel : les vraies différences pour votre santé</a></h3>
-            <p>Index glycémique, fermentation, digestibilité : pourquoi le pain au levain artisanal est infiniment supérieur.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Lire l'article →</a>
-          </div>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ================================
-       SECTION ASTUCES DE CHEFS
-  ================================ -->
-  <section id="astuces" class="section astuces-section" aria-labelledby="astuces-title">
-    <div class="container">
-
-      <div class="section-header fade-in">
-        <div>
-          <span class="section-label">👨‍🍳 Expertise</span>
-          <h2 class="section-title" id="astuces-title">Astuces de chefs</h2>
-          <p class="section-desc">Trucs et astuces pour améliorer votre cuisine au quotidien, testés par des professionnels.</p>
-        </div>
-        <a href="#astuces" class="btn btn-outline" style="color:rgba(255,255,255,0.8); border-color:rgba(255,255,255,0.4);">Apprenez les astuces →</a>
-      </div>
-
-      <div class="grid-3 fade-in">
-
-        <article class="astuce-card">
-          <div class="card-image">
-            <img src="assets/images/astuce-chef.jpg"
-                 alt="Chef cuisinier professionnel préparant une sauce"
-                 loading="lazy"
-                 width="800"
-                 height="500" />
-            <span class="card-category">Technique</span>
-          </div>
-          <div class="card-body">
-            <h3>La technique du brunissement parfait pour vos viandes</h3>
-            <p>Obtenir une croûte dorée et savoureuse n'est pas qu'une question de température. Un chef étoilé révèle les erreurs les plus courantes et comment les éviter.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Découvrir l'astuce →</a>
-            <span class="tip-number">#01</span>
-          </div>
-        </article>
-
-        <article class="astuce-card">
-          <div class="card-image">
-            <img src="assets/images/astuce-cuisine.jpg"
-                 alt="Organisation et mise en place professionnelle en cuisine"
-                 loading="lazy"
-                 width="800"
-                 height="500" />
-            <span class="card-category">Organisation</span>
-          </div>
-          <div class="card-body">
-            <h3>La mise en place : le secret des cuisiniers pros pour ne jamais stresser</h3>
-            <p>Préparez tous vos ingrédients avant de commencer. Cette technique de restaurant transforme radicalement l'expérience en cuisine maison.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Découvrir l'astuce →</a>
-            <span class="tip-number">#02</span>
-          </div>
-        </article>
-
-        <article class="astuce-card">
-          <div class="card-image">
-            <img src="assets/images/recette-pates.jpg"
-                 alt="Cuisson des pâtes al dente comme un chef italien"
-                 loading="lazy"
-                 width="800"
-                 height="500" />
-            <span class="card-category">Cuisson</span>
-          </div>
-          <div class="card-body">
-            <h3>Pâtes al dente : pourquoi vous faites toujours fausse route</h3>
-            <p>Eau salée, pas de matière grasse, finition à la poêle avec l'eau de cuisson : les règles d'or qu'un chef italien respecte à la lettre.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Découvrir l'astuce →</a>
-            <span class="tip-number">#03</span>
-          </div>
-        </article>
-
-        <article class="astuce-card">
-          <div class="card-image">
-            <img src="assets/images/aliment-legumes.jpg"
-                 alt="Assaisonnement et épices pour relever les légumes"
-                 loading="lazy"
-                 width="800"
-                 height="500" />
-            <span class="card-category">Assaisonnement</span>
-          </div>
-          <div class="card-body">
-            <h3>Saler et assaisonner : le moment précis qui change tout à vos plats</h3>
-            <p>Le sel ne sert pas seulement à relever — il structure les saveurs. Apprenez quand (et comment) assaisonner chaque étape de votre préparation.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Découvrir l'astuce →</a>
-            <span class="tip-number">#04</span>
-          </div>
-        </article>
-
-        <article class="astuce-card">
-          <div class="card-image">
-            <img src="assets/images/recette-pizza.jpg"
-                 alt="Pâte à pizza : le repos au froid pour une texture parfaite"
-                 loading="lazy"
-                 width="800"
-                 height="500" />
-            <span class="card-category">Pâtisserie & Pizza</span>
-          </div>
-          <div class="card-body">
-            <h3>Pâte à pizza maison : l'astuce de la fermentation lente au réfrigérateur</h3>
-            <p>48h au froid plutôt que 2h à température ambiante : ce simple changement donne une pâte digne des meilleures pizzerias napolitaines.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Découvrir l'astuce →</a>
-            <span class="tip-number">#05</span>
-          </div>
-        </article>
-
-        <article class="astuce-card">
-          <div class="card-image">
-            <img src="assets/images/aliment-fruits.jpg"
-                 alt="Conservation des fruits et légumes pour éviter le gaspillage"
-                 loading="lazy"
-                 width="800"
-                 height="500" />
-            <span class="card-category">Conservation</span>
-          </div>
-          <div class="card-body">
-            <h3>Zéro gaspillage : comment conserver vos fruits et légumes 2x plus longtemps</h3>
-            <p>Frigo ou hors frigo ? Avec ou sans plastique ? Les bonnes pratiques de conservation qui préservent les nutriments et les saveurs.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="read-more">Découvrir l'astuce →</a>
-            <span class="tip-number">#06</span>
-          </div>
-        </article>
-
-      </div>
-
-      <div style="text-align:center; margin-top: 48px;" class="fade-in">
-        <a href="#astuces" class="btn btn-primary">Voir toutes les astuces</a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ================================
-       SECTION NEWSLETTER
-  ================================ -->
-  <section id="newsletter" class="newsletter-section" aria-labelledby="newsletter-title">
-    <div class="newsletter-bg">
-      <img src="assets/images/newsletter-bg.jpg"
-           alt="Table dressée avec des plats savoureux"
-           loading="lazy"
-           width="1400"
-           height="500" />
-    </div>
-
-    <div class="container">
-      <div class="newsletter-content fade-in">
-
-        <div class="newsletter-icon" aria-hidden="true">📬</div>
-
-        <h2 id="newsletter-title">Recevez notre sélection hebdomadaire</h2>
-        <p>Recevez chaque semaine notre sélection de recettes et conseils directement dans votre boîte mail. Plus de 12 000 passionnés de cuisine nous font confiance.</p>
-
-        <form class="newsletter-form nl-form" novalidate aria-label="Inscription à la newsletter">
-          <label for="nl-email" class="sr-only">Votre adresse e-mail</label>
-          <input type="email"
-                 id="nl-email"
-                 name="email"
-                 placeholder="Votre adresse e-mail"
-                 required
-                 autocomplete="email"
-                 aria-required="true" />
-          <button type="submit" class="btn btn-white">S'abonner à la newsletter</button>
-        </form>
-
-        <p class="newsletter-notice">
-          En vous inscrivant, vous acceptez notre <a href="#">politique de confidentialité</a>. Désinscription possible à tout moment.
-        </p>
-
-        <div class="newsletter-features">
-          <span class="nl-feature"><span>✅</span> 1 email par semaine</span>
-          <span class="nl-feature"><span>✅</span> Sans spam</span>
-          <span class="nl-feature"><span>✅</span> Désinscription facile</span>
-          <span class="nl-feature"><span>✅</span> Recettes exclusives</span>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ================================
-       FOOTER
-  ================================ -->
-  <footer role="contentinfo">
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <!-- Brand -->
-        <div class="footer-brand">
-          <a href="#" class="logo" aria-label="Pizza Di Muro - Accueil">
-            <img src="assets/images/logo.png"
-                 alt="Pizza Di Muro"
-                 width="120"
-                 height="40" />
-          </a>
-          <p>Pizza Di Muro, c'est votre rendez-vous quotidien avec la cuisine. Recettes accessibles, astuces de chefs, actualités food et focus sur les meilleurs aliments.</p>
-          <div class="footer-socials">
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="Instagram">ig</a>
-            <a href="#" aria-label="Pinterest">P</a>
-            <a href="#" aria-label="YouTube">▶</a>
-            <a href="#" aria-label="TikTok">tt</a>
-          </div>
-        </div>
-
-        <!-- Rubriques -->
-        <div class="footer-col">
-          <h4>Rubriques</h4>
-          <ul class="footer-links">
-            <li><a href="#actualites">Actualités culinaires</a></li>
-            <li><a href="#recettes">Recettes faciles</a></li>
-            <li><a href="#aliments">Focus aliments</a></li>
-            <li><a href="#astuces">Astuces de chefs</a></li>
+      <div class="header-inner">
+        <a href="/" class="site-logo" aria-label="Pizza Di Muro - Accueil">
+          <img src="assets/images/logo.png" alt="Pizza Di Muro" width="160" height="50" />
+        </a>
+
+        <nav class="main-nav" aria-label="Navigation principale">
+          <ul>
+            <li><a href="#actualites" class="active">Actualités</a></li>
+            <li><a href="#recettes">Recettes</a></li>
+            <li><a href="#astuces">Astuces</a></li>
+            <li><a href="#aliments">Aliments</a></li>
             <li><a href="#newsletter">Newsletter</a></li>
           </ul>
-        </div>
-
-        <!-- À propos -->
-        <div class="footer-col">
-          <h4>À propos</h4>
-          <ul class="footer-links">
-            <li><a href="#">Notre équipe</a></li>
-            <li><a href="#">Nos auteurs</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Plan du site</a></li>
-            <li><a href="#">Partenariats</a></li>
-          </ul>
-        </div>
-
-        <!-- Newsletter mini -->
-        <div class="footer-col">
-          <h4>Restez informé</h4>
-          <p style="color:rgba(255,255,255,0.55); font-size:0.85rem; margin-bottom:14px;">Les meilleures recettes chaque semaine dans votre boîte mail.</p>
-          <form class="footer-newsletter-mini nl-form" novalidate>
-            <label for="footer-nl-email" class="sr-only">Email newsletter</label>
-            <input type="email"
-                   id="footer-nl-email"
-                   name="email"
-                   placeholder="votre@email.fr"
-                   required
-                   autocomplete="email" />
-            <button type="submit" class="btn btn-primary">S'abonner</button>
-          </form>
-        </div>
-
-      </div>
-
-      <!-- Footer bottom -->
-      <div class="footer-bottom">
-        <p>
-          &copy; 2025 <a href="#">Pizza Di Muro</a>. Tous droits réservés.
-        </p>
-        <nav class="footer-bottom-links" aria-label="Liens légaux">
-          <a href="#">Mentions légales</a>
-          <a href="#">Confidentialité</a>
-          <a href="#">Cookies</a>
         </nav>
-      </div>
 
+        <div class="header-actions">
+          <form class="search-form" role="search" action="https://pizza-dimuro.fr/" method="get">
+            <input type="search" name="s" placeholder="Rechercher..." aria-label="Rechercher" />
+            <button type="submit" aria-label="Lancer la recherche"><i class="fas fa-search"></i></button>
+          </form>
+          <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile">
+      <div class="container">
+        <ul>
+          <li><a href="#actualites"><i class="fas fa-newspaper"></i>&nbsp; Actualités</a></li>
+          <li><a href="#recettes"><i class="fas fa-utensils"></i>&nbsp; Recettes</a></li>
+          <li><a href="#astuces"><i class="fas fa-lightbulb"></i>&nbsp; Astuces</a></li>
+          <li><a href="#aliments"><i class="fas fa-apple-alt"></i>&nbsp; Aliments</a></li>
+          <li><a href="#newsletter"><i class="fas fa-envelope"></i>&nbsp; Newsletter</a></li>
+        </ul>
+        <div class="mobile-nav-search">
+          <input type="search" placeholder="Rechercher une recette, une astuce..." aria-label="Rechercher" />
+          <button type="button" aria-label="Lancer la recherche"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-label="Articles à la une">
+      <div class="hero-featured">
+
+        <!-- Article principal -->
+        <article class="hero-main">
+          <img
+            src="assets/images/hero-gateau.jpg"
+            alt="Gâteau moelleux citron fraise cuit à la poêle"
+            width="900"
+            height="600"
+          />
+          <div class="hero-main-overlay"></div>
+          <div class="hero-main-content">
+            <span class="tag tag-primary">Recette du moment</span>
+            <h1>Pizza Di Muro : Recettes faciles, astuces cuisine et actualités food au quotidien</h1>
+            <p>Gâteau moelleux citron-fraise cuit à la poêle — Une recette express, sans four et pleine de saveurs printanières à découvrir dès maintenant.</p>
+            <div class="hero-meta">
+              <span><i class="far fa-clock"></i> 15 min</span>
+              <span><i class="far fa-user"></i> Équipe Di Muro</span>
+              <span><i class="far fa-calendar"></i> 19 mai 2026</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sidebar articles -->
+        <aside class="hero-sidebar" aria-label="Articles récents">
+          <div class="hero-sidebar-header">
+            <span>À lire également</span>
+          </div>
+          <div class="hero-sidebar-articles">
+
+            <article class="hero-sidebar-article">
+              <img src="assets/images/actu-bio-cantines.jpg" alt="Extension site bio cantines" loading="lazy" width="90" height="65" />
+              <div class="hero-sidebar-article-content">
+                <span class="tag tag-primary" style="font-size:0.62rem;">Actualité</span>
+                <h3>Extension d'un site logistique dédié à l'approvisionnement bio des cantines</h3>
+                <div class="hero-sidebar-article-meta">19 mai 2026</div>
+              </div>
+            </article>
+
+            <article class="hero-sidebar-article">
+              <img src="assets/images/astuce-pates.jpg" alt="Astuces pour des pâtes qui ne collent jamais" loading="lazy" width="90" height="65" />
+              <div class="hero-sidebar-article-content">
+                <span class="tag tag-primary" style="font-size:0.62rem;">Astuce</span>
+                <h3>L'astuce de chefs pour des pâtes qui ne collent jamais</h3>
+                <div class="hero-sidebar-article-meta">18 mai 2026</div>
+              </div>
+            </article>
+
+            <article class="hero-sidebar-article">
+              <img src="assets/images/actu-cadmium.jpg" alt="Contamination alimentaire cadmium" loading="lazy" width="90" height="65" />
+              <div class="hero-sidebar-article-content">
+                <span class="tag tag-primary" style="font-size:0.62rem;">Santé</span>
+                <h3>Contamination alimentaire par le cadmium : ce que vous devez savoir</h3>
+                <div class="hero-sidebar-article-meta">17 mai 2026</div>
+              </div>
+            </article>
+
+            <article class="hero-sidebar-article">
+              <img src="assets/images/aliment-anticancer.jpg" alt="Alimentation et protection contre le cancer" loading="lazy" width="90" height="65" />
+              <div class="hero-sidebar-article-content">
+                <span class="tag tag-primary" style="font-size:0.62rem;">Nutrition</span>
+                <h3>Les choix alimentaires associés à une meilleure protection contre le cancer</h3>
+                <div class="hero-sidebar-article-meta">16 mai 2026</div>
+              </div>
+            </article>
+
+            <article class="hero-sidebar-article">
+              <img src="assets/images/actu-rappel-produits.jpg" alt="Vérification produits rappelés" loading="lazy" width="90" height="65" />
+              <div class="hero-sidebar-article-content">
+                <span class="tag tag-primary" style="font-size:0.62rem;">Actualité</span>
+                <h3>Comment vérifier si un produit alimentaire fait l'objet d'un rappel ?</h3>
+                <div class="hero-sidebar-article-meta">15 mai 2026</div>
+              </div>
+            </article>
+
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== BREAKING NEWS ===== -->
+    <div class="breaking-news" aria-label="Titres du moment">
+      <div class="container">
+        <div class="breaking-news-inner">
+          <span class="breaking-badge"><i class="fas fa-bolt"></i>&nbsp; Flash</span>
+          <div class="breaking-ticker">
+            <div class="breaking-ticker-inner">
+              <a href="https://pizza-dimuro.fr/actualites/">Hausse du prix des œufs en 2026 : pourquoi et jusqu'à quand ?</a>
+              <a href="https://pizza-dimuro.fr/recettes/">Pain maison sans pétrissage : le test sur 30 jours</a>
+              <a href="https://pizza-dimuro.fr/astuces/">Les plats italiens souvent mal interprétés en France</a>
+              <a href="https://pizza-dimuro.fr/actualites/">Ateliers de réduction du gaspillage alimentaire en expansion</a>
+              <a href="https://pizza-dimuro.fr/aliments/">Les aliments du petit-déjeuner que les nutritionnistes déconseillent</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SECTION ACTUALITÉS ===== -->
+    <section id="actualites" class="section section-news">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-header-left">
+            <div class="section-label">
+              <div class="section-label-line"></div>
+              <span class="section-label-text">Dernières nouvelles</span>
+            </div>
+            <h2>Actualités culinaires et tendances food</h2>
+          </div>
+          <a href="https://pizza-dimuro.fr/actualites/" class="view-all">Voir tous les articles <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <p class="section-desc" style="color: var(--text-medium); margin-bottom: 36px; max-width: 700px;">
+          Restez informé des dernières actualités culinaires, des tendances food et des conseils pour une alimentation saine et gourmande.
+        </p>
+
+        <div class="news-layout">
+          <div class="news-main">
+            <!-- Article vedette -->
+            <article class="news-featured">
+              <img
+                src="assets/images/actu-bio-cantines.jpg"
+                alt="Extension d'un site logistique bio pour les cantines scolaires"
+                loading="lazy"
+                width="760"
+                height="428"
+              />
+              <div class="news-featured-overlay"></div>
+              <div class="news-featured-content">
+                <span class="tag tag-primary">Bio &amp; Local</span>
+                <h3><a href="https://pizza-dimuro.fr/actualites/">Extension d'un site logistique dédié à l'approvisionnement bio des cantines scolaires</a></h3>
+                <p>Un opérateur logistique spécialisé dans les circuits courts biologiques annonce l'agrandissement de son entrepôt principal pour répondre à la demande croissante des cantines publiques.</p>
+                <div class="news-featured-meta">
+                  <span><i class="far fa-user"></i> Rédaction Di Muro</span>
+                  <span><i class="far fa-calendar"></i> 19 mai 2026</span>
+                  <span><i class="far fa-clock"></i> 4 min de lecture</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Grille actualités -->
+            <div class="news-grid">
+              <article class="card">
+                <div class="card-image">
+                  <img src="assets/images/actu-cadmium.jpg" alt="Contamination alimentaire par le cadmium" loading="lazy" width="380" height="240" />
+                  <div class="card-image-overlay"><span class="tag tag-primary">Santé</span></div>
+                </div>
+                <div class="card-body">
+                  <h3><a href="https://pizza-dimuro.fr/actualites/">Contamination alimentaire par le cadmium : les sols pointés du doigt</a></h3>
+                  <p>Une étude européenne révèle des niveaux inquiétants de cadmium dans certaines cultures légumières cultivées sur des sols industriels.</p>
+                  <div class="card-meta">
+                    <div class="card-meta-left">
+                      <span><i class="far fa-calendar"></i> 17 mai 2026</span>
+                      <span><i class="far fa-user"></i> Sophie M.</span>
+                    </div>
+                    <span class="card-read-time">3 min</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card-image">
+                  <img src="assets/images/actu-rappel-produits.jpg" alt="Vérification des produits rappelés en cuisine" loading="lazy" width="380" height="240" />
+                  <div class="card-image-overlay"><span class="tag tag-primary">Sécurité</span></div>
+                </div>
+                <div class="card-body">
+                  <h3><a href="https://pizza-dimuro.fr/actualites/">Rappels alimentaires : comment vérifier facilement vos produits à domicile</a></h3>
+                  <p>Face à la multiplication des alertes sanitaires, voici les outils et réflexes à adopter pour ne jamais consommer un produit retiré du marché.</p>
+                  <div class="card-meta">
+                    <div class="card-meta-left">
+                      <span><i class="far fa-calendar"></i> 15 mai 2026</span>
+                      <span><i class="far fa-user"></i> Marc T.</span>
+                    </div>
+                    <span class="card-read-time">5 min</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card-image">
+                  <img src="assets/images/aliment-anticancer.jpg" alt="Aliments protecteurs contre le cancer" loading="lazy" width="380" height="240" />
+                  <div class="card-image-overlay"><span class="tag tag-primary">Nutrition</span></div>
+                </div>
+                <div class="card-body">
+                  <h3><a href="https://pizza-dimuro.fr/actualites/">Ces choix alimentaires qui réduisent significativement le risque de cancer</a></h3>
+                  <p>De nouvelles recherches confirment le lien entre certains groupes d'aliments et une réduction mesurable du risque de développer certains cancers.</p>
+                  <div class="card-meta">
+                    <div class="card-meta-left">
+                      <span><i class="far fa-calendar"></i> 16 mai 2026</span>
+                      <span><i class="far fa-user"></i> Dr. A. Blanc</span>
+                    </div>
+                    <span class="card-read-time">6 min</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card-image">
+                  <img src="assets/images/actu-food.jpg" alt="Tendances food 2026" loading="lazy" width="380" height="240" />
+                  <div class="card-image-overlay"><span class="tag tag-primary">Tendance</span></div>
+                </div>
+                <div class="card-body">
+                  <h3><a href="https://pizza-dimuro.fr/actualites/">Food trends 2026 : les 10 grandes tendances qui transforment notre façon de manger</a></h3>
+                  <p>Fermentation, cuisines du monde, alimentation intuitive, circuits ultra-courts... décryptage des mouvements qui définissent la table de demain.</p>
+                  <div class="card-meta">
+                    <div class="card-meta-left">
+                      <span><i class="far fa-calendar"></i> 14 mai 2026</span>
+                      <span><i class="far fa-user"></i> Julie R.</span>
+                    </div>
+                    <span class="card-read-time">7 min</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- CTA -->
+            <div style="text-align: center; margin-top: 36px;">
+              <a href="https://pizza-dimuro.fr/actualites/" class="btn btn-primary">
+                <i class="fas fa-newspaper"></i> Découvrez nos articles d'actualité
+              </a>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="news-sidebar" aria-label="Articles populaires">
+            <div class="sidebar-widget">
+              <div class="sidebar-widget-header">
+                <h3><i class="fas fa-fire"></i>&nbsp; Les plus lus</h3>
+              </div>
+              <div class="sidebar-widget-body">
+                <ul class="trending-list">
+                  <li class="trending-item">
+                    <span class="trending-number">01</span>
+                    <a href="https://pizza-dimuro.fr/recettes/">
+                      <h4>Pain maison sans pétrissage testé pendant 30 jours consécutifs</h4>
+                      <div class="trending-item-meta"><i class="far fa-eye"></i> 24 800 vues</div>
+                    </a>
+                  </li>
+                  <li class="trending-item">
+                    <span class="trending-number">02</span>
+                    <a href="https://pizza-dimuro.fr/actualites/">
+                      <h4>Les aliments du petit-déjeuner que les nutritionnistes évitent</h4>
+                      <div class="trending-item-meta"><i class="far fa-eye"></i> 19 600 vues</div>
+                    </a>
+                  </li>
+                  <li class="trending-item">
+                    <span class="trending-number">03</span>
+                    <a href="https://pizza-dimuro.fr/actualites/">
+                      <h4>Plats italiens souvent mal interprétés ou modifiés en France</h4>
+                      <div class="trending-item-meta"><i class="far fa-eye"></i> 17 200 vues</div>
+                    </a>
+                  </li>
+                  <li class="trending-item">
+                    <span class="trending-number">04</span>
+                    <a href="https://pizza-dimuro.fr/actualites/">
+                      <h4>Pourquoi le prix des œufs continue-t-il d'augmenter en 2026 ?</h4>
+                      <div class="trending-item-meta"><i class="far fa-eye"></i> 15 400 vues</div>
+                    </a>
+                  </li>
+                  <li class="trending-item">
+                    <span class="trending-number">05</span>
+                    <a href="https://pizza-dimuro.fr/astuces/">
+                      <h4>L'astuce simple pour ne jamais rater sa pâte à pizza maison</h4>
+                      <div class="trending-item-meta"><i class="far fa-eye"></i> 13 900 vues</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Widget catégories -->
+            <div class="sidebar-widget">
+              <div class="sidebar-widget-header">
+                <h3><i class="fas fa-tags"></i>&nbsp; Catégories</h3>
+              </div>
+              <div class="sidebar-widget-body">
+                <ul style="display:flex; flex-direction:column; gap:8px;">
+                  <li style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid var(--border);">
+                    <a href="https://pizza-dimuro.fr/actualites/" style="font-size:.88rem; font-weight:600; color:var(--secondary); transition:color .2s;">Actualités culinaires</a>
+                    <span style="background:var(--primary); color:white; font-size:.72rem; padding:2px 8px; border-radius:20px;">48</span>
+                  </li>
+                  <li style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid var(--border);">
+                    <a href="https://pizza-dimuro.fr/recettes/" style="font-size:.88rem; font-weight:600; color:var(--secondary); transition:color .2s;">Recettes gourmandes</a>
+                    <span style="background:var(--primary); color:white; font-size:.72rem; padding:2px 8px; border-radius:20px;">124</span>
+                  </li>
+                  <li style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid var(--border);">
+                    <a href="https://pizza-dimuro.fr/astuces/" style="font-size:.88rem; font-weight:600; color:var(--secondary); transition:color .2s;">Astuces de cuisine</a>
+                    <span style="background:var(--primary); color:white; font-size:.72rem; padding:2px 8px; border-radius:20px;">67</span>
+                  </li>
+                  <li style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid var(--border);">
+                    <a href="https://pizza-dimuro.fr/aliments/" style="font-size:.88rem; font-weight:600; color:var(--secondary); transition:color .2s;">Focus aliments</a>
+                    <span style="background:var(--primary); color:white; font-size:.72rem; padding:2px 8px; border-radius:20px;">39</span>
+                  </li>
+                  <li style="display:flex; justify-content:space-between; align-items:center; padding:8px 0;">
+                    <a href="https://pizza-dimuro.fr/nutrition/" style="font-size:.88rem; font-weight:600; color:var(--secondary); transition:color .2s;">Nutrition &amp; Santé</a>
+                    <span style="background:var(--primary); color:white; font-size:.72rem; padding:2px 8px; border-radius:20px;">55</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION RECETTES ===== -->
+    <section id="recettes" class="section section-recipes">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-header-left">
+            <div class="section-label">
+              <div class="section-label-line"></div>
+              <span class="section-label-text">Cuisine &amp; Saveurs</span>
+            </div>
+            <h2>Recettes faciles et gourmandes</h2>
+          </div>
+          <a href="https://pizza-dimuro.fr/recettes/" class="view-all">Toutes les recettes <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <p style="color: var(--text-medium); margin-bottom: 28px; max-width: 700px;">
+          Explorez une sélection variée de recettes simples à réaliser, adaptées à tous les goûts et occasions, pour régaler toute la famille.
+        </p>
+
+        <!-- Tabs -->
+        <div class="recipes-tabs" role="tablist">
+          <button class="recipes-tab active" data-tab="all" role="tab" aria-selected="true">Toutes</button>
+          <button class="recipes-tab" data-tab="rapides" role="tab" aria-selected="false">Rapides</button>
+          <button class="recipes-tab" data-tab="italiennes" role="tab" aria-selected="false">Italiennes</button>
+          <button class="recipes-tab" data-tab="desserts" role="tab" aria-selected="false">Desserts</button>
+        </div>
+
+        <!-- Grid recettes -->
+        <div class="grid-3 recipes-tab-content" data-content="all">
+
+          <article class="card">
+            <div class="card-image">
+              <img src="assets/images/recette-pizza.jpg" alt="Pizza maison à la sauce tomate et mozzarella fraîche" loading="lazy" width="400" height="250" />
+              <div class="card-image-overlay"><span class="tag tag-primary">Pizza</span></div>
+            </div>
+            <div class="card-body">
+              <h3><a href="https://pizza-dimuro.fr/recettes/">Pizza maison à la sauce tomate et mozzarella fraîche</a></h3>
+              <p>La vraie pizza napolitaine réalisable chez vous, avec une pâte légère et croustillante, une sauce tomate maison et des ingrédients de qualité.</p>
+              <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom: 12px;">
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="far fa-clock"></i> 45 min</span>
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="fas fa-signal" style="font-size:.7rem;"></i> Facile</span>
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="fas fa-users"></i> 4 pers.</span>
+              </div>
+              <div class="card-meta">
+                <div class="card-meta-left">
+                  <span><i class="far fa-calendar"></i> 18 mai 2026</span>
+                </div>
+                <span class="card-read-time">Voir la recette</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="assets/images/recette-pates.jpg" alt="Pâtes à la carbonara selon la recette originale romaine" loading="lazy" width="400" height="250" />
+              <div class="card-image-overlay"><span class="tag tag-primary">Pâtes</span></div>
+            </div>
+            <div class="card-body">
+              <h3><a href="https://pizza-dimuro.fr/recettes/">Pâtes à la carbonara — La recette originale romaine sans crème</a></h3>
+              <p>Oubliez la crème fraîche ! Découvrez la vraie carbonara romaine, onctueuse et savoureuse, réalisée uniquement avec des jaunes d'œufs, guanciale et pecorino.</p>
+              <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom: 12px;">
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="far fa-clock"></i> 20 min</span>
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="fas fa-signal" style="font-size:.7rem;"></i> Intermédiaire</span>
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="fas fa-users"></i> 2 pers.</span>
+              </div>
+              <div class="card-meta">
+                <div class="card-meta-left">
+                  <span><i class="far fa-calendar"></i> 17 mai 2026</span>
+                </div>
+                <span class="card-read-time">Voir la recette</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="assets/images/recette-gateau-fraise.jpg" alt="Gâteau moelleux citron fraise cuit à la poêle" loading="lazy" width="400" height="250" />
+              <div class="card-image-overlay"><span class="tag tag-primary">Dessert</span></div>
+            </div>
+            <div class="card-body">
+              <h3><a href="https://pizza-dimuro.fr/recettes/">Gâteau moelleux citron-fraise cuit à la poêle en 15 minutes</a></h3>
+              <p>Un dessert express et étonnamment moelleux, cuisiné directement à la poêle. Parfait pour les gourmands pressés qui veulent impressionner sans effort.</p>
+              <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom: 12px;">
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="far fa-clock"></i> 15 min</span>
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="fas fa-signal" style="font-size:.7rem;"></i> Facile</span>
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="fas fa-users"></i> 4 pers.</span>
+              </div>
+              <div class="card-meta">
+                <div class="card-meta-left">
+                  <span><i class="far fa-calendar"></i> 19 mai 2026</span>
+                </div>
+                <span class="card-read-time">Voir la recette</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="assets/images/recette-salade.jpg" alt="Salade de fraises au basilic frais et vinaigre balsamique" loading="lazy" width="400" height="250" />
+              <div class="card-image-overlay"><span class="tag tag-primary">Salade</span></div>
+            </div>
+            <div class="card-body">
+              <h3><a href="https://pizza-dimuro.fr/recettes/">Salade de fraises au basilic, vinaigre balsamique et poivre noir</a></h3>
+              <p>Une salade sucrée-salée d'une fraîcheur absolue, idéale en entrée légère ou en dessert estival. La combinaison fraise-basilic vous surprendra agréablement.</p>
+              <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom: 12px;">
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="far fa-clock"></i> 10 min</span>
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="fas fa-signal" style="font-size:.7rem;"></i> Très facile</span>
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="fas fa-users"></i> 4 pers.</span>
+              </div>
+              <div class="card-meta">
+                <div class="card-meta-left">
+                  <span><i class="far fa-calendar"></i> 16 mai 2026</span>
+                </div>
+                <span class="card-read-time">Voir la recette</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="assets/images/recette-pain.jpg" alt="Pain maison sans pétrissage à la croûte dorée" loading="lazy" width="400" height="250" />
+              <div class="card-image-overlay"><span class="tag tag-primary">Pain</span></div>
+            </div>
+            <div class="card-body">
+              <h3><a href="https://pizza-dimuro.fr/recettes/">Pain maison sans pétrissage : la recette qui fait tout le travail seule</a></h3>
+              <p>Une mie alvéolée, une croûte dorée et croustillante — et zéro pétrissage. Ce pain en cocotte devient votre meilleur allié pour des petits-déjeuners de rêve.</p>
+              <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom: 12px;">
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="far fa-clock"></i> 45 min + repos</span>
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="fas fa-signal" style="font-size:.7rem;"></i> Facile</span>
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="fas fa-users"></i> 6 pers.</span>
+              </div>
+              <div class="card-meta">
+                <div class="card-meta-left">
+                  <span><i class="far fa-calendar"></i> 15 mai 2026</span>
+                </div>
+                <span class="card-read-time">Voir la recette</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="assets/images/astuce-tarte.jpg" alt="Pâte à tarte croustillante maison" loading="lazy" width="400" height="250" />
+              <div class="card-image-overlay"><span class="tag tag-primary">Tarte</span></div>
+            </div>
+            <div class="card-body">
+              <h3><a href="https://pizza-dimuro.fr/recettes/">Pâte à tarte croustillante : le secret des boulangers révélé</a></h3>
+              <p>La technique professionnelle pour obtenir une pâte parfaitement dorée, qui ne ramollit jamais, même avec une garniture très humide. Le truc change tout.</p>
+              <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom: 12px;">
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="far fa-clock"></i> 30 min</span>
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="fas fa-signal" style="font-size:.7rem;"></i> Intermédiaire</span>
+                <span style="font-size:.75rem; color:var(--text-light);"><i class="fas fa-users"></i> 6 pers.</span>
+              </div>
+              <div class="card-meta">
+                <div class="card-meta-left">
+                  <span><i class="far fa-calendar"></i> 14 mai 2026</span>
+                </div>
+                <span class="card-read-time">Voir la recette</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- CTA recettes -->
+        <div style="text-align: center; margin-top: 44px;">
+          <a href="https://pizza-dimuro.fr/recettes/" class="btn btn-primary">
+            <i class="fas fa-utensils"></i> Parcourez nos recettes
+          </a>
+          <a href="https://pizza-dimuro.fr/recettes/" class="btn btn-secondary" style="margin-left: 12px;">
+            Recettes du moment <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION ASTUCES ===== -->
+    <section id="astuces" class="section section-tips">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-header-left">
+            <div class="section-label">
+              <div class="section-label-line"></div>
+              <span class="section-label-text">Techniques &amp; Savoir-faire</span>
+            </div>
+            <h2>Conseils et astuces de cuisine</h2>
+          </div>
+          <a href="https://pizza-dimuro.fr/astuces/" class="view-all">Toutes les astuces <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <p style="color: var(--text-medium); margin-bottom: 36px; max-width: 700px;">
+          Apprenez des astuces de chefs pour améliorer vos techniques culinaires, optimiser vos ingrédients et réussir vos plats à coup sûr.
+        </p>
+
+        <div class="tips-layout">
+          <!-- Featured -->
+          <div class="tips-featured">
+            <img src="assets/images/astuce-pates.jpg" alt="Astuce chef pour des pâtes parfaites qui ne collent jamais" loading="lazy" width="360" height="480" />
+            <div class="tips-featured-overlay"></div>
+            <div class="tips-featured-content">
+              <span class="tag tag-primary">Astuce chef</span>
+              <h3><a href="https://pizza-dimuro.fr/astuces/">L'astuce infaillible pour des pâtes qui ne collent jamais, même réchauffées</a></h3>
+              <div style="font-size:.8rem; color:rgba(255,255,255,.65); margin-top: 8px;">
+                <i class="far fa-clock"></i> 2 min de lecture &nbsp;|&nbsp; <i class="far fa-calendar"></i> 18 mai 2026
+              </div>
+            </div>
+          </div>
+
+          <!-- Liste astuces -->
+          <div class="tips-list">
+
+            <article class="tip-item">
+              <div class="tip-item-image">
+                <img src="assets/images/astuce-marc-cafe.jpg" alt="Marc de café pour stimuler la croissance des fraisiers" loading="lazy" width="100" height="72" />
+              </div>
+              <div class="tip-item-body">
+                <span class="tag tag-light">Jardinage culinaire</span>
+                <h3><a href="https://pizza-dimuro.fr/astuces/">Infusion de marc de café pour favoriser la croissance des fraisiers au printemps</a></h3>
+                <div class="tip-item-meta"><i class="far fa-calendar"></i> 19 mai 2026 &nbsp;·&nbsp; <i class="far fa-clock"></i> 3 min</div>
+              </div>
+            </article>
+
+            <article class="tip-item">
+              <div class="tip-item-image">
+                <img src="assets/images/astuce-tarte.jpg" alt="Garder la pâte à tarte croustillante" loading="lazy" width="100" height="72" />
+              </div>
+              <div class="tip-item-body">
+                <span class="tag tag-light">Pâtisserie</span>
+                <h3><a href="https://pizza-dimuro.fr/astuces/">L'astuce traditionnelle qui garde la pâte des tartes bien croustillante jusqu'au service</a></h3>
+                <div class="tip-item-meta"><i class="far fa-calendar"></i> 18 mai 2026 &nbsp;·&nbsp; <i class="far fa-clock"></i> 4 min</div>
+              </div>
+            </article>
+
+            <article class="tip-item">
+              <div class="tip-item-image">
+                <img src="assets/images/astuce-citronnier.jpg" alt="Stimuler la croissance du citronnier au printemps" loading="lazy" width="100" height="72" />
+              </div>
+              <div class="tip-item-body">
+                <span class="tag tag-light">Astuce nature</span>
+                <h3><a href="https://pizza-dimuro.fr/astuces/">L'astuce naturelle qui stimule la croissance du citronnier dès le printemps</a></h3>
+                <div class="tip-item-meta"><i class="far fa-calendar"></i> 17 mai 2026 &nbsp;·&nbsp; <i class="far fa-clock"></i> 3 min</div>
+              </div>
+            </article>
+
+            <article class="tip-item">
+              <div class="tip-item-image">
+                <img src="assets/images/astuce-eponge.jpg" alt="Désinfecter les éponges sans produits chimiques" loading="lazy" width="100" height="72" />
+              </div>
+              <div class="tip-item-body">
+                <span class="tag tag-light">Hygiène cuisine</span>
+                <h3><a href="https://pizza-dimuro.fr/astuces/">Une astuce simple et efficace pour désinfecter les éponges sans produits chimiques</a></h3>
+                <div class="tip-item-meta"><i class="far fa-calendar"></i> 16 mai 2026 &nbsp;·&nbsp; <i class="far fa-clock"></i> 2 min</div>
+              </div>
+            </article>
+
+            <article class="tip-item">
+              <div class="tip-item-image">
+                <img src="assets/images/astuce-chef.jpg" alt="Astuces de chef pour cuisiner mieux au quotidien" loading="lazy" width="100" height="72" />
+              </div>
+              <div class="tip-item-body">
+                <span class="tag tag-light">Technique culinaire</span>
+                <h3><a href="https://pizza-dimuro.fr/astuces/">7 astuces de chef pour améliorer la texture et le goût de tous vos plats</a></h3>
+                <div class="tip-item-meta"><i class="far fa-calendar"></i> 14 mai 2026 &nbsp;·&nbsp; <i class="far fa-clock"></i> 5 min</div>
+              </div>
+            </article>
+
+            <!-- CTA -->
+            <div style="margin-top: 8px;">
+              <a href="https://pizza-dimuro.fr/astuces/" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                <i class="fas fa-lightbulb"></i> Découvrez nos astuces
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION ALIMENTS ===== -->
+    <section id="aliments" class="section section-foods">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-header-left">
+            <div class="section-label">
+              <div class="section-label-line" style="background: var(--primary-light);"></div>
+              <span class="section-label-text">Nutrition &amp; Bien-être</span>
+            </div>
+            <h2>Focus sur les aliments et leurs bienfaits</h2>
+          </div>
+          <a href="https://pizza-dimuro.fr/aliments/" class="view-all">Explorer les aliments <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <p style="color: rgba(255,255,255,.65); margin-bottom: 36px; max-width: 700px;">
+          Comprenez mieux les aliments, leurs propriétés nutritionnelles et comment les intégrer dans une alimentation équilibrée.
+        </p>
+
+        <div class="foods-grid">
+
+          <article class="food-card">
+            <div class="food-card-image">
+              <img src="assets/images/aliment-fruits.jpg" alt="Fruits rouges et leurs bienfaits antioxydants" loading="lazy" width="300" height="225" />
+            </div>
+            <div class="food-card-body">
+              <span class="tag tag-primary">Fruits rouges</span>
+              <h3><a href="https://pizza-dimuro.fr/aliments/">Fruits rouges : pourquoi ils sont les rois des antioxydants et comment les consommer</a></h3>
+              <p>Framboises, fraises, myrtilles, cerises... Ces petites bombes nutritionnelles protègent vos cellules et boostent votre immunité au quotidien.</p>
+              <div class="food-card-meta"><i class="far fa-calendar"></i> 19 mai 2026</div>
+            </div>
+          </article>
+
+          <article class="food-card">
+            <div class="food-card-image">
+              <img src="assets/images/aliment-legumes.jpg" alt="Légumes verts de saison et leurs apports nutritionnels" loading="lazy" width="300" height="225" />
+            </div>
+            <div class="food-card-body">
+              <span class="tag tag-primary">Légumes verts</span>
+              <h3><a href="https://pizza-dimuro.fr/aliments/">Légumes verts de saison : lesquels favoriser et comment maximiser leurs apports</a></h3>
+              <p>Épinards, brocoli, courgettes, haricots verts... Guide complet pour choisir les légumes les plus nutritifs selon la saison et bien les cuisiner.</p>
+              <div class="food-card-meta"><i class="far fa-calendar"></i> 18 mai 2026</div>
+            </div>
+          </article>
+
+          <article class="food-card">
+            <div class="food-card-image">
+              <img src="assets/images/aliment-anticancer.jpg" alt="Aliments protecteurs et bienfaits pour prévenir le cancer" loading="lazy" width="300" height="225" />
+            </div>
+            <div class="food-card-body">
+              <span class="tag tag-primary">Prévention</span>
+              <h3><a href="https://pizza-dimuro.fr/aliments/">Alimentation anti-cancer : les aliments protecteurs validés par la recherche</a></h3>
+              <p>Curcuma, brocoli, ail, tomate cuite... La science identifie des molécules spécifiques dans certains aliments qui exercent un effet protecteur sur les cellules.</p>
+              <div class="food-card-meta"><i class="far fa-calendar"></i> 17 mai 2026</div>
+            </div>
+          </article>
+
+          <article class="food-card">
+            <div class="food-card-image">
+              <img src="assets/images/astuce-citronnier.jpg" alt="Le citron et ses multiples vertus en cuisine et pour la santé" loading="lazy" width="300" height="225" />
+            </div>
+            <div class="food-card-body">
+              <span class="tag tag-primary">Agrumes</span>
+              <h3><a href="https://pizza-dimuro.fr/aliments/">Le citron : vertus médicinales, usages culinaires et bienfaits pour la digestion</a></h3>
+              <p>Bien plus qu'un simple exhausteur de goût, le citron est un aliment aux propriétés remarquables : alcalinisant, détoxifiant et riche en vitamine C biodisponible.</p>
+              <div class="food-card-meta"><i class="far fa-calendar"></i> 16 mai 2026</div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- CTA aliments -->
+        <div style="text-align: center; margin-top: 44px;">
+          <a href="https://pizza-dimuro.fr/aliments/" class="btn btn-white">
+            <i class="fas fa-apple-alt"></i> En savoir plus sur les aliments
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION NEWSLETTER ===== -->
+    <section id="newsletter" class="section-newsletter">
+      <div class="container">
+        <div class="newsletter-content">
+
+          <div class="newsletter-left">
+            <div class="newsletter-badge">
+              <i class="fas fa-envelope-open-text"></i>
+              <span>Newsletter hebdomadaire</span>
+            </div>
+            <h2>Newsletter Pizza Di Muro</h2>
+            <p>Recevez chaque semaine notre sélection de recettes, astuces et actualités food directement dans votre boîte mail.</p>
+            <div class="newsletter-perks">
+              <div class="newsletter-perk">
+                <div class="newsletter-perk-icon"><i class="fas fa-utensils"></i></div>
+                <span>3 recettes exclusives chaque semaine</span>
+              </div>
+              <div class="newsletter-perk">
+                <div class="newsletter-perk-icon"><i class="fas fa-lightbulb"></i></div>
+                <span>Les meilleures astuces de chefs</span>
+              </div>
+              <div class="newsletter-perk">
+                <div class="newsletter-perk-icon"><i class="fas fa-newspaper"></i></div>
+                <span>Actualités food et tendances en avant-première</span>
+              </div>
+              <div class="newsletter-perk">
+                <div class="newsletter-perk-icon"><i class="fas fa-leaf"></i></div>
+                <span>Conseils nutrition et bien-être</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="newsletter-right">
+            <div class="newsletter-form-card">
+              <div class="newsletter-form-wrapper">
+                <h3>Rejoignez notre communauté</h3>
+                <p>Plus de <strong>42 000 abonnés</strong> reçoivent déjà notre newsletter. Inscrivez-vous gratuitement !</p>
+                <form class="newsletter-form" action="#" method="post" novalidate>
+                  <input type="text" name="firstname" placeholder="Votre prénom" required autocomplete="given-name" />
+                  <input type="email" name="email" placeholder="Votre adresse email" required autocomplete="email" />
+                  <button type="submit">
+                    <i class="fas fa-paper-plane"></i>&nbsp; S'abonner à la newsletter
+                  </button>
+                </form>
+                <p class="newsletter-disclaimer">
+                  <i class="fas fa-lock"></i>&nbsp; Vos données sont protégées. Désinscription possible à tout moment.
+                </p>
+              </div>
+              <div class="newsletter-success">
+                <div class="newsletter-success-icon">🎉</div>
+                <h4>Bienvenue dans la famille !</h4>
+                <p>Votre inscription est confirmée. Vous recevrez votre première newsletter dès cette semaine.</p>
+              </div>
+              <p class="newsletter-count">
+                <strong>+42 000</strong> abonnés nous font déjà confiance
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-top-inner">
+
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <a href="/" aria-label="Pizza Di Muro - Retour à l'accueil">
+                <img src="assets/images/logo.png" alt="Pizza Di Muro" width="150" height="45" />
+              </a>
+            </div>
+            <p class="footer-description">
+              Pizza Di Muro est votre magazine culinaire en ligne : recettes simples, astuces de chefs, actualités food et focus sur les aliments pour manger mieux chaque jour.
+            </p>
+            <div class="footer-social" aria-label="Réseaux sociaux">
+              <a href="https://www.facebook.com/pizzadimuro" aria-label="Facebook" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/pizzadimuro" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@pizzadimuro" aria-label="TikTok" rel="noopener noreferrer" target="_blank"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.youtube.com/@pizzadimuro" aria-label="YouTube" rel="noopener noreferrer" target="_blank"><i class="fab fa-youtube"></i></a>
+              <a href="https://twitter.com/pizzadimuro" aria-label="X / Twitter" rel="noopener noreferrer" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links-grid">
+            <div class="footer-links-col">
+              <h4>Rubriques</h4>
+              <ul>
+                <li><a href="https://pizza-dimuro.fr/actualites/">Actualités culinaires</a></li>
+                <li><a href="https://pizza-dimuro.fr/recettes/">Recettes gourmandes</a></li>
+                <li><a href="https://pizza-dimuro.fr/astuces/">Astuces de cuisine</a></li>
+                <li><a href="https://pizza-dimuro.fr/aliments/">Focus aliments</a></li>
+                <li><a href="https://pizza-dimuro.fr/nutrition/">Nutrition &amp; Santé</a></li>
+              </ul>
+            </div>
+            <div class="footer-links-col">
+              <h4>Recettes</h4>
+              <ul>
+                <li><a href="https://pizza-dimuro.fr/recettes/pizza/">Pizzas maison</a></li>
+                <li><a href="https://pizza-dimuro.fr/recettes/pates/">Pâtes italiennes</a></li>
+                <li><a href="https://pizza-dimuro.fr/recettes/desserts/">Desserts faciles</a></li>
+                <li><a href="https://pizza-dimuro.fr/recettes/salades/">Salades composées</a></li>
+                <li><a href="https://pizza-dimuro.fr/recettes/pain/">Pains &amp; viennoiseries</a></li>
+              </ul>
+            </div>
+            <div class="footer-links-col">
+              <h4>À propos</h4>
+              <ul>
+                <li><a href="https://pizza-dimuro.fr/contact/">Contact</a></li>
+                <li><a href="https://pizza-dimuro.fr/auteurs/">Nos auteurs</a></li>
+                <li><a href="https://pizza-dimuro.fr/plan-du-site/">Plan du site</a></li>
+                <li><a href="https://pizza-dimuro.fr/partenaires/">Partenaires</a></li>
+                <li><a href="https://pizza-dimuro.fr/newsletter/">Newsletter</a></li>
+              </ul>
+            </div>
+            <div class="footer-links-col">
+              <h4>Légal</h4>
+              <ul>
+                <li><a href="https://pizza-dimuro.fr/mentions-legales/">Mentions légales</a></li>
+                <li><a href="https://pizza-dimuro.fr/politique-confidentialite/">Confidentialité</a></li>
+                <li><a href="https://pizza-dimuro.fr/cookies/">Politique de cookies</a></li>
+                <li><a href="https://pizza-dimuro.fr/cgu/">CGU</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p class="footer-copyright">
+            &copy; 2026 Pizza Di Muro. Tous droits réservés.
+          </p>
+          <nav class="footer-legal" aria-label="Liens légaux">
+            <a href="https://pizza-dimuro.fr/mentions-legales/">Mentions légales</a>
+            <a href="https://pizza-dimuro.fr/politique-confidentialite/">Confidentialité</a>
+            <a href="https://pizza-dimuro.fr/cookies/">Cookies</a>
+          </nav>
+        </div>
+      </div>
     </div>
   </footer>
 
-
-  <!-- ================================
-       UTILITAIRES
-  ================================ -->
-
-  <!-- Toast notification -->
-  <div id="toast" class="toast" role="alert" aria-live="polite">
-    <span class="toast-icon">🎉</span>
-    <p></p>
-  </div>
-
-  <!-- Scroll to top -->
-  <button id="scrollTop" class="btn-scroll-top" aria-label="Retour en haut de page" title="Retour en haut">
-    ↑
+  <!-- Back to top -->
+  <button class="back-to-top" aria-label="Retour en haut de page">
+    <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- Accessibility: skip to content -->
-  <a href="#actualites" class="sr-only" style="position:absolute;left:-9999px;top:0;background:var(--primary);color:#fff;padding:8px 16px;z-index:9999;border-radius:4px;">
-    Aller au contenu principal
-  </a>
-
-  <!-- Scripts -->
+  <!-- Script -->
   <script src="assets/js/main.js" defer></script>
 
 </body>

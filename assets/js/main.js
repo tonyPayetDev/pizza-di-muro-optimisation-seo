@@ -1,69 +1,52 @@
-/* =============================================
-   Pizza Di Muro - Scripts principaux
-   ============================================= */
+/* Pizza Di Muro - Main JavaScript */
 
-document.addEventListener('DOMContentLoaded', () => {
-  initHeader();
-  initMobileMenu();
-  initLazyLoad();
-  initScrollAnimations();
-  initScrollTop();
-  initNewsletter();
-  initTrendingScroll();
-  initSectionNav();
-});
+(function () {
+  'use strict';
 
-/* ---- Header sticky ---- */
-function initHeader() {
-  const header = document.getElementById('header');
-  if (!header) return;
+  // ===== HAMBURGER MENU =====
+  const hamburger = document.querySelector('.hamburger');
+  const mobileNav = document.querySelector('.mobile-nav');
 
-  const handleScroll = () => {
-    header.classList.toggle('scrolled', window.scrollY > 50);
-  };
-
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
-}
-
-/* ---- Mobile menu ---- */
-function initMobileMenu() {
-  const burger = document.getElementById('burger');
-  const nav = document.getElementById('main-nav');
-  if (!burger || !nav) return;
-
-  burger.addEventListener('click', () => {
-    const isOpen = burger.classList.toggle('active');
-    nav.classList.toggle('open', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-    burger.setAttribute('aria-expanded', String(isOpen));
-  });
-
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      burger.classList.remove('active');
-      nav.classList.remove('open');
-      document.body.style.overflow = '';
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      const expanded = hamburger.classList.contains('open');
+      hamburger.setAttribute('aria-expanded', expanded);
     });
-  });
+  }
 
-  document.addEventListener('click', (e) => {
-    if (!header.contains(e.target) && nav.classList.contains('open')) {
-      burger.classList.remove('active');
-      nav.classList.remove('open');
-      document.body.style.overflow = '';
+  // ===== STICKY HEADER =====
+  const header = document.querySelector('.site-header');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
     }
-  });
-}
+  }, { passive: true });
 
-const header = document.getElementById('header');
+  // ===== BACK TO TOP =====
+  const backToTop = document.querySelector('.back-to-top');
 
-/* ---- Lazy Loading images ---- */
-function initLazyLoad() {
-  const images = document.querySelectorAll('img[loading="lazy"]');
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    }, { passive: true });
 
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ===== LAZY LOADING IMAGES =====
   if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
+    const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const img = entry.target;
@@ -71,145 +54,118 @@ function initLazyLoad() {
             img.src = img.dataset.src;
             img.removeAttribute('data-src');
           }
-          img.classList.add('loaded');
-          observer.unobserve(img);
+          imageObserver.unobserve(img);
         }
       });
     }, { rootMargin: '200px 0px' });
 
-    images.forEach(img => observer.observe(img));
-  } else {
-    images.forEach(img => {
-      if (img.dataset.src) img.src = img.dataset.src;
-    });
+    document.querySelectorAll('img[data-src]').forEach(img => imageObserver.observe(img));
   }
-}
 
-/* ---- Scroll animations (Intersection Observer) ---- */
-function initScrollAnimations() {
-  const elements = document.querySelectorAll('.fade-in');
-  if (!elements.length) return;
+  // ===== RECIPES TABS =====
+  const tabs = document.querySelectorAll('.recipes-tab');
+  const tabContents = document.querySelectorAll('.recipes-tab-content');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const target = tab.dataset.tab;
+      tabContents.forEach(content => {
+        content.style.display = content.dataset.content === target ? 'grid' : 'none';
+      });
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-  elements.forEach(el => observer.observe(el));
-}
-
-/* ---- Scroll to top button ---- */
-function initScrollTop() {
-  const btn = document.getElementById('scrollTop');
-  if (!btn) return;
-
-  window.addEventListener('scroll', () => {
-    btn.classList.toggle('visible', window.scrollY > 400);
-  }, { passive: true });
-
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-}
 
-/* ---- Newsletter forms ---- */
-function initNewsletter() {
-  const forms = document.querySelectorAll('.nl-form');
-
-  forms.forEach(form => {
+  // ===== NEWSLETTER FORM =====
+  document.querySelectorAll('.newsletter-form').forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const input = form.querySelector('input[type="email"]');
-      const email = input?.value?.trim();
+      const card = form.closest('.newsletter-form-card') || form.parentElement;
+      const formWrapper = card.querySelector('.newsletter-form-wrapper');
+      const success = card.querySelector('.newsletter-success');
 
-      if (!email || !isValidEmail(email)) {
-        showToast('⚠️', 'Veuillez saisir une adresse email valide.');
-        return;
+      if (formWrapper && success) {
+        formWrapper.style.display = 'none';
+        success.classList.add('show');
+      } else {
+        const btn = form.querySelector('button[type="submit"]');
+        if (btn) {
+          btn.textContent = 'Merci ! Vous etes inscrit(e)';
+          btn.style.background = '#22c55e';
+          btn.disabled = true;
+        }
       }
-
-      const btn = form.querySelector('button[type="submit"]');
-      const originalText = btn.textContent;
-      btn.textContent = '...';
-      btn.disabled = true;
-
-      setTimeout(() => {
-        input.value = '';
-        btn.textContent = originalText;
-        btn.disabled = false;
-        showToast('🎉', 'Merci ! Vous êtes inscrit(e) à notre newsletter.');
-      }, 800);
     });
   });
-}
 
-function isValidEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
+  // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const href = anchor.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const offset = header ? header.offsetHeight + 20 : 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
 
-/* ---- Toast notification ---- */
-function showToast(icon, message) {
-  let toast = document.getElementById('toast');
-  if (!toast) {
-    toast = document.createElement('div');
-    toast.id = 'toast';
-    toast.className = 'toast';
-    toast.innerHTML = `<span class="toast-icon"></span><p></p>`;
-    document.body.appendChild(toast);
+  // ===== ACTIVE NAV ON SCROLL =====
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
+
+  if (sections.length && navLinks.length) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + entry.target.id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-50% 0px -50% 0px' });
+
+    sections.forEach(section => sectionObserver.observe(section));
   }
 
-  toast.querySelector('.toast-icon').textContent = icon;
-  toast.querySelector('p').textContent = message;
-  toast.classList.add('show');
+  // ===== TICKER DUPLICATE (for infinite scroll) =====
+  const ticker = document.querySelector('.breaking-ticker-inner');
+  if (ticker) {
+    const clone = ticker.cloneNode(true);
+    ticker.parentElement.appendChild(clone);
+  }
 
-  clearTimeout(toast._timeout);
-  toast._timeout = setTimeout(() => toast.classList.remove('show'), 4000);
-}
-
-/* ---- Trending scroll duplicate content ---- */
-function initTrendingScroll() {
-  const scroll = document.querySelector('.trending-scroll');
-  if (!scroll) return;
-  scroll.innerHTML += scroll.innerHTML;
-}
-
-/* ---- Section nav active state ---- */
-function initSectionNav() {
-  const navLinks = document.querySelectorAll('.section-nav a[data-section]');
-  if (!navLinks.length) return;
-
-  const sections = [];
-  navLinks.forEach(link => {
-    const section = document.getElementById(link.dataset.section);
-    if (section) sections.push({ link, section });
-  });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(l => l.classList.remove('active'));
-        const activeLink = [...navLinks].find(l => l.dataset.section === entry.target.id);
-        if (activeLink) activeLink.classList.add('active');
+  // ===== SEARCH FORM =====
+  document.querySelectorAll('.search-form input, .mobile-nav-search input').forEach(input => {
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && input.value.trim()) {
+        window.location.href = `https://pizza-dimuro.fr/?s=${encodeURIComponent(input.value.trim())}`;
       }
     });
-  }, { threshold: 0.3 });
-
-  sections.forEach(({ section }) => observer.observe(section));
-}
-
-/* ---- Smooth anchor scroll with header offset ---- */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const targetId = this.getAttribute('href').slice(1);
-    const target = document.getElementById(targetId);
-    if (!target) return;
-
-    e.preventDefault();
-    const headerHeight = document.getElementById('header')?.offsetHeight || 0;
-    const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
-    window.scrollTo({ top, behavior: 'smooth' });
   });
-});
+
+  // ===== FADE-IN ANIMATION ON SCROLL =====
+  if ('IntersectionObserver' in window) {
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -40px 0px', threshold: 0.08 });
+
+    document.querySelectorAll('.card, .food-card, .tip-item, .news-featured').forEach(el => {
+      el.classList.add('fade-in-init');
+      fadeObserver.observe(el);
+    });
+  }
+
+})();
